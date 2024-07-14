@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card {
+        background: white;
+        margin-top: 2px;
+      }
+      .success {
+        color: rgb(15, 171, 15);
+        background: black;
+        border-bottom: 2px solid gray;
+      }
+
+      p.failed {
+        background: black;
+        color: rgb(255, 109, 109);
+      }
+      div > p {
+        padding: 5px;
+        margin: 0;
+      }
+      div.responseDiv > div {
+        border: 2px solid gray;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      }
+      .scroll {
+        overflow-y: scroll;
+      }
+    </style>
+    <script src="./backend.js" defer></script>
+  </head>
+  <body style="height: 100lvh">
+    <div style="height: 20lvh">
+      <h1 class="" style="text-align: center">Hospital Room Reservation</h1>
+      <form action="" onsubmit="submitRoomRequest(event)" style="text-align: center">
+        <select name="" id="rooms" required style="padding: 10px; font-size: 14px">
+          <option value="">Please enter the type of room you want to reserve</option>
+          <option value="OxygenRoom">Oxygen Room</option>
+          <option value="IcuRoom">ICU room</option>
+          <option value="NormalRoom">Normal Rooms</option>
+        </select>
+        <button
+          type="submit"
+          style="padding: 10px; background: rgba(0, 0, 255, 0.627); color: white; border: none"
+        >
+          Book Room
+        </button>
+      </form>
+    </div>
+
+    <div class="responseDiv" style="width: 50%; height: 78lvh; margin: auto"></div>
+  </body>
+</html>
